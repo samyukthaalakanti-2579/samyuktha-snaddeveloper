@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script>
+        function RegistrationForm(){
+            var user = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            var mobileNumber = document.getElementById('mobileNumber').value;
+            var dob = document.getElementById('dob').value;
+            var address = document.getElementById('address').value;
+
+            if(user == ""){
+            document.getElementById('username').innerHTML = "*please fill this feild ";
+             return false;
+        }
+       
+        if(pass == ""){
+            document.getElementById('username').innerHTML = "*please fill this feild ";
+             return false;
+        }
+             if(mobileNumber == ""){
+            document.getElementById('username').innerHTML = "*please fill this feild ";
+             return false;
+             }
+             if( dob == ""){
+            document.getElementById('username').innerHTML = "*please fill this feild ";
+             return false;
+             }
+             if(address == ""){
+            document.getElementById('username').innerHTML = "*please fill this feild ";
+             return false;
+
+}
+        }
+    
+</script>
+</head>
+<body>
+    
+    
+    <div class = "form-group">
+        <label>Username:</label>
+        <input type ="text" name ="user" class="form-control" id = "user">
+    </div>
+    <div class = "form-group">
+        <label>Password:</label>
+        <input type ="text" name ="pass" class="form-control" id = "pass">
+    </div>
+    <div class = "form-group">
+        <label>Mobile Number:</label>
+        <input type ="text" name ="mobile" class="form-control" id = "mobile number">
+    </div>
+    <div class = "form-group">
+        <label>DOB:</label>
+        <input type ="text" name ="DOB" class="form-control" id = "DOB">
+    </div>
+    <div class = "form-group">
+        <label>Address:</label>
+        <input type ="text" name ="Address" class="form-control" id = "Address">
+    </div>
+    <input type="submit" name="submit" value="submit">
+</body>
+</html>
+        
