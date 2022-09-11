@@ -1,0 +1,52 @@
+Question 2
+2.Explain how to iterate an object in javascript?
+There are three ways we can iterate over an object in JavaScript:
+1.Using for...in statement
+2.Using Object.entries() method and for...of statement
+3.Using Object.keys() method and for...of statement.
+
+1.Iterate over object using for…in statement
+To iterate over an object type variable in JavaScript, you need to use the for..in statement.
+The for...in statement allows you to iterate over the object property keys, so we can log both 
+the property keys and values.
+Example:
+const obj = {
+    name: "Samyuktha",
+    age: 22,
+    job: "Web developer",
+  };
+  
+  for (const key in obj) {
+    console.log(`${key}: ${obj[key]}`);
+  }
+
+2.Iterate over object using Object.entries() method
+The Object.entries() method is a built-in method of the JavaScript Object class that transforms an
+object value into a two-dimensional array.
+Example:
+const obj = {
+    name: "Samyuktha",
+    age: 22,
+    job: "Web developer",
+  };
+  
+  const objArray = Object.entries(obj);
+  console.log(objArray);
+  
+3.Iterate over object using Object.keys() method
+Aside from Object.entries(), you can also use the Object.keys() method, which returns your object property
+keys as an array.You can then use the for...of statement to iterate over the array and log each object property.
+Example:
+const obj = {
+    name: "Samyuktha",
+    age: 22,
+    job: "Web developer",
+  };
+  
+  const keys = Object.keys(obj);
+  
+  for (const key of keys) {
+    console.log(`${key}: ${obj[key]}`);
+  }
+
+

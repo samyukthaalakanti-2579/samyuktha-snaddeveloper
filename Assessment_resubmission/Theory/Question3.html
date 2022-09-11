@@ -1,0 +1,25 @@
+Question 3
+Explain about promises and create promise with simple example?
+PROMISE OBJECT
+In java script promise object is an eventual completion of an asynchronous operation and its resulthing value.
+it supports the two properties,when a promise object is pending it results undefined and when it is fullfilled it result is the value .
+Example for promiseobject:
+
+    function myDisplayer(some){
+        document.getElementById("demo").innerHTML = some;
+    }
+let myPromise = new promise(function(myResolve,myReject)){
+    let x=0;
+    if(x==0){
+        myResolve("print ok");
+    }
+    else{
+        myReject("print error");
+    }
+});
+mypromise.then(
+    function(value)
+    {myDisplayer(value);}
+    function(error)
+    {myDisplayer(error);}
+);

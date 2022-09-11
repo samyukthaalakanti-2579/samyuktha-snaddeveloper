@@ -1,0 +1,13 @@
+Question7
+7.Explain about currying with example? 
+CURRING IN JAVASCRIPT
+curring in javascript means evaluating functions with the multiple arguments and decomposing
+them into the sequence of functions with single argument.simply it is a check method to
+check everthing before proceeding. when we want the same call with some the same parameters 
+then it helps in passing the same variable again and again.it makes the code easier.
+Example:
+function sum(a, b) {
+    return a + b;
+  }
+  const curriedSum = curry(sum)
+  console.log(curriedSum(1)(2)) 

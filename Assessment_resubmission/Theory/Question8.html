@@ -1,0 +1,30 @@
+Question8
+8.Explain about object prototype and add reverse method to String class to reverse a given string?
+OBJECT PROTOTYPE
+ Prototype is an object,in javascript  it has a build-in property which is prototype.
+ as it is object it has own prototype .when we try to access a function object javascript will look
+ at its prototype property to see it is there .if it is not present then it goes to the prototype chain
+ and try to find.
+
+ for example:
+ const string = prompt('Enter a string: ');
+
+  const result = reverseString(string);
+ console.log(result);
+ the output will be reverse of what the user enters in the prompt box.
+
+  object prototype:
+ 
+   function Student() {
+   this.name = 'girish';
+   this.gender = 'Male';
+ }
+
+  Student.prototype.age = 15;
+
+   var studObj1 = new Student();
+   alert(studObj1.age); 
+   var studObj2 = new Student();
+   alert(studObj2.age); 
+
+    Age="15" for student object2.

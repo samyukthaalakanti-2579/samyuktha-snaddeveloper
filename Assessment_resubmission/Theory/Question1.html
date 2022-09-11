@@ -1,0 +1,19 @@
+Question 1
+1.What is a callback function and callback hell in javascript?
+CALLBACK FUNCTION
+A callback  function is just a regular function, which is called after another function
+has finished executing.The callback functions are nested inside each other since we 
+depend on the data from the previous function.
+example:
+console.log("Before...");
+setTimeout(function() {
+    console.log("It took 500ms to get here!");
+}, 500);
+console.log("After...");
+
+CALLBACK HELL
+In short, callback hell means that you have multiple functions that are asynchronous. 
+Those functions depend on each other, which might, in turn, get quite messy with a lot
+of callback function that is nested in multiple layers. This will result in chaos, and 
+you will end up with code which is hard to read and maintain.
+
