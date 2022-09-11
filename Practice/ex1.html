@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+
+    <script>
+
+        function validateUserName(){
+            var userCtrl = document.getElementById('userName');
+            if(userCtrl.value == ""){
+                document.getElementById("userNameError").innerHTML = "user Name is mandatory";
+                userCtrl.focus();
+                return false;
+            }
+        else {
+            if(userCtrl.value.length < 6 ) {
+                document.getElementById("userNameError").innerHTML = "Min 6 characters are required";
+                passCtrl.focus();
+                return false;
+            }
+            document.getElementById("userNameError").innerHTML = "";
+            return true;
+        }
+        
+        }
+        function validatePassword(){
+            var passCtrl = document.getElementById('Password');
+            if(passCtrl.value == ""){
+                document.getElementById("passwordError").innerHTML = " password is mandatory";
+                passCtrl.focus();
+                return false;
+            }
+            else{
+                if()
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
