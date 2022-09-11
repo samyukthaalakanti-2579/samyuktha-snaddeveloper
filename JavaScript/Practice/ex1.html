@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Fibinocci series
+        // 0 1 1 2 3 5 8 13 21....
+     function generateSeries(){
+        let n=document.getElementById("terms")
+        let a=0;
+        let b=1;
+        let c=a+b;
+        let series = [];
+        series.push(a);
+        series.push(b);
+        series.push(c);
+
+        for(let i=0;i<n.value - 3;i++){
+            a=b;
+            b=c;
+            c=a+b;
+            series.push(c);
+        }
+        console.log(series);
+    }
+    </script>
+</head>
+<body>
+    Enter Number of Terms : <input type="text" id="terms" value="">
+    <input type="button" value="Print Series" onclick="generateSeries()">
+</body>
+</html>

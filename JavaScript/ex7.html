@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+         
+        const empObj = {
+            firstName: 'Samyuktha',
+            lastName: 'Alakanti'
+        };
+        //shallow copy
+        /*
+        let copiedObj = empObj;
+        console.log(empObj);
+        console.log(copiedObj);
+        copiedObj.firstName = "Samyuktha";
+        console.log(empObj);
+        console.log(copiedObj);
+        */
+        
+        /*
+        let copiedObj = JSON.parse(JSON.stringify(empObj));
+        console.log(empObj);
+        console.log(copiedObj);
+        copiedObj.firstName ="Sahithi";
+        console.log(empObj);
+        console.log(copiedObj);
+        */
+         /*
+        let copiedObj = Object.assign({},empObj);
+        console.log(empObj);
+        console.log(copiedObj);
+        copiedObj.firstName ="Sahithi";
+        copiedObj.address.cityName = "Hyd";
+        console.log(empObj);
+        console.log(copiedObj);
+        */
+        
+        //deep copy
+        let copiedObj = {
+            ...empObj,
+        address:{...empObj.address}
+    };
+        console.log(empObj);
+        console.log(copiedObj);
+        copiedObj.firstName ="Sahithi";
+        copiedObj.address.cityName = "Hyd";
+        console.log(empObj);
+        console.log(copiedObj);
+        //spread operator
+
+        let a = [10,20,30,40];
+        console.log(...a);
+
+        let str="ABC345ABC3456";
+        let tempObj = {};
+        for (let i=0; i < str.length;i++) {
+            if (tempObj[str[i]]){
+                tempObj[str[i]]++;
+            }
+            else{
+                tempObj[str[i]]=1;
+            }
+        }
+        console.log(tempObj);
+
+        const custObj = {
+            firstName : 'karthik',
+            lastName: 'krishna'
+        }
+        Object.freeze(custObj);
+        custObj.firstName = "Sahithi";
+        console.log(custObj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

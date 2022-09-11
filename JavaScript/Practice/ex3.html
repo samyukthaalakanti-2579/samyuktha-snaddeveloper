@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ageInDays() {
+            const d= new Date();
+            let year = d.getFullYear();
+
+            var birthYear = document.getElementById("years").value;
+            var bYear = (year - birthYear) * 365;
+            var message = document.getElementById("message");
+        
+
+        }
+        console.log();
+    </script>
+</head>
+<body>
+    <h2>Your Age in Days</h2>
+    <div class="input-box">
+        <input type="number" class="age-number" id="years" placeholder="Enter your Birth Year">
+        <i class="calander icon"></i>
+    </div>
+    
+</body>
+</html>

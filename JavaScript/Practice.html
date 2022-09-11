@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayTime(){
+            var dateTime = new Date();
+            var hrs = dateTime.getHours();
+            var min = dateTime.getMinutes();
+            var sec = dateTime.getSeconds();
+            var session = document.getElementById('session');
+
+            document.getElementById('hours').innerHTML = hrs;
+            document.getElementById('minutes').innerHTML = min;
+            document.getElementById('seconds').innerHTML = sec;
+
+
+        }
+        setInterval(displayTime,10);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        <span id ="session">AM</span>
+
+    </div>
+</body>
+</html>

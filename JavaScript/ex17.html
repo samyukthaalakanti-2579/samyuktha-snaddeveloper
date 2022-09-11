@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function outerfunction()
+        {
+            let counter = 0;
+            function increment(){
+                counter++;
+                return counter;
+            }
+            function decrement(){
+                counter--;
+                return counter;
+            }
+            return {
+                incrementCounter: increment,
+                decrementCounter: decrement
+            };
+        }
+        let fun = outerfunction();
+        function manageCounter(val){
+           if(val == 1){
+             document.getElementById("div1").innerHTML= fun.incrementCounter();
+        }
+        else {
+            document.getElementById("div1").innerHTML= fun.decrementCounter();
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="div1">0</div>
+    <br>
+    <input type="button" value="Increment"  onclick="manageCounter(1)"> &nbsp;
+    <input type="button" value="Decrement" onclick="manageCounter(2)">
+</body>
+</html>

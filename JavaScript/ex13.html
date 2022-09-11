@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Event handling
+       function show() {
+           alert("This is show function");
+       }
+        function loadEvent(){
+            alert("Page is loading....");
+        }
+       //console.log(window);
+        
+       function keyUpEvent() {
+           let value = document.getElementById("text1").value;
+           console.log(value);
+       }
+
+    </script>
+</head>
+<body onload="loadEvent()">
+    <input type = "button" value="Click Me" onclick="show()">
+    <br>
+    <br>
+    Enter any Text : <input type="text" id="text1" onkeyup="keyUpEvent()">
+    <br>
+    <br>
+    Select Your City :
+    <select id = "cityName">
+        <option value="1">Hyderabad</option>
+        <option value="2">Siddipet</option>
+        <option value="3">Gajwel</option>
+    </select>
+
+</body>
+</html>

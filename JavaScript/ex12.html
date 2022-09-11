@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function Customer(){
+            var _custId;
+            this.custId = function (value) {
+                if(value == undefined)
+                return _custId;
+            }
+
+            var _custName;
+            this.custName = function(value) {
+                if (value == undefined)
+                     return _custName;
+                else
+                    _custName=value;
+            }
+
+            var _custAmount;
+            this.custAmount = function(value) {
+                if(value == undefined)
+                    return _custAmount;
+                else
+                    _custAmount = value;    
+            }
+         }
+
+         let cust = new Customer();
+         cust.custId(101);
+         cust.custName("Samyuktha");
+         cust.custAmount(35000);
+
+         console.log(cust.custId(), cust.custName(), cust.custAmount());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

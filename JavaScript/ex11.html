@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+     function Customer(id, name, amount) {
+       var custId = id;
+       var cudtName = name;
+       var custAmount = amount;
+    
+    this.showData = function () {
+        console.log(custId, custName, custAmount);
+    }
+}
+let cust = new Customer(111,'Samyuktha',35000);
+cust.showData();
+
+let cust2 = new Customer(222,"Sahithi",56000);
+cust2.showData();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
