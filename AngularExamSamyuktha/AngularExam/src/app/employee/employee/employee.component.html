@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <br /><br />
+      <app-navbar></app-navbar>
+      <br />
+      <div style="min-height: 600px">
+        <h3>Employees List</h3>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Employee Id</th>
+              <th>Department Id</th>
+              <th>Employee Name</th>
+              <th>Employee Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of employees">
+              <td>{{ emp.empId }}</td>
+              <td>{{ emp.deptId }}</td>
+              <td>{{ emp.empName }}</td>
+              <td>{{ emp.empSalary }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <p>Designed By SNAD Develpers</p>
+    </div>
+  </div>
+</div>
+

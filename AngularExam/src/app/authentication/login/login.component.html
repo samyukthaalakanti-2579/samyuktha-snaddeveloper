@@ -1,0 +1,24 @@
+<div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+    <div class="text-center mb-3">
+            <h2>Register</h2>
+    </div>
+ <form name="loginForm" #loginForm="ngForm" (ngSubmit)="loginForm.valid && login(loginForm)" >
+    <div class="mb-3">
+        <label for="loginUsername" class="form-label">User Name</label>
+        <input type="text" name="userName"  #userName="ngModel"  id="loginUsername" class="form-control"
+            placeholder="User Name" aria-describedby="username"  [(ngModel)]="loginObj.userName" required>
+        <small *ngIf="(userName.invalid && userName.touched) || (userName.invalid && loginForm.submitted)"
+        id="userName" class="text-muted">User Name is Mandatory</small>
+    </div>
+    <div class="mb-3">
+        <label for="loginPassword" class="form-label">Password</label>
+        <input type="text" name="password" #password="ngModel" id="loginPassword" class="form-control"
+            placeholder="Password" aria-describedby="password" [(ngModel)]="loginObj.password" required>
+        <small *ngIf="(password.invalid && password.touched) || (password.invalid && loginForm.submitted)"
+        id="password" class="text-muted">Password is Mandatory</small>
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Login">
+    </div>
+ </form>
+</div>
